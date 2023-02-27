@@ -12,8 +12,8 @@ class Client(BaseModel):
     client_surname = Column(Text)
     client_name = Column(Text, nullable=False)
     client_firstname = Column(Text)
-    client_telephone = Column(Text, nullable=False, unique=True)
-    client_last_telephone = Column(Text, unique=True)
+    client_telephone = Column(Text, nullable=False)
+    client_last_telephone = Column(Text)
 
     user = relationship('User', foreign_keys=[user_id])
 
