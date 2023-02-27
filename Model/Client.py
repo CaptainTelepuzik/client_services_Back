@@ -6,14 +6,14 @@ from Model.BaseModel import BaseModel
 
 
 class Client(BaseModel):
-    __tablename__ = 'tasks'
+    __tablename__ = 'clients'
 
     user_id = Column(Integer, ForeignKey('users.id'))
-    surname = Column(Text, nullable=False)
-    name = Column(Text, nullable=False)
-    firstname = Column(Text, nullable=False)
-    telephone = Column(Text, nullable=False, unique=True)
-    last_telephone = Column(Text, nullable=False, unique=True)
+    client_surname = Column(Text, nullable=False)
+    client_name = Column(Text, nullable=False)
+    client_firstname = Column(Text, nullable=False)
+    client_telephone = Column(Text, nullable=False, unique=True)
+    client_last_telephone = Column(Text, nullable=False, unique=True)
 
     user = relationship('User', foreign_keys=[user_id])
 
