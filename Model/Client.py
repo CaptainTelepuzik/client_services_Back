@@ -14,6 +14,8 @@ class Client(BaseModel):
     client_firstname = Column(Text)
     client_telephone = Column(Text, nullable=False)
     client_last_telephone = Column(Text)
+    client_email = Column(Text)
+    client_comments = Column(Text)
 
     user = relationship('User', foreign_keys=[user_id])
 
