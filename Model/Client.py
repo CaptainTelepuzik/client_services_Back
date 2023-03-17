@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Text, Integer, ForeignKey
+from sqlalchemy import Column, Text, Integer, ForeignKey, Date
 from sqlalchemy.orm import relationship
 
 
@@ -11,6 +11,7 @@ class Client(BaseModel):
     user_id = Column(Integer, ForeignKey('users.id'))
     client_surname = Column(Text)
     client_name = Column(Text, nullable=False)
+    client_birthday = Column(Date)
     client_firstname = Column(Text)
     client_telephone = Column(Text, nullable=False)
     client_last_telephone = Column(Text)
