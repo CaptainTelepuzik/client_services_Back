@@ -12,7 +12,9 @@ class Client(BaseClass):
         if filter_params.get('searchTelephone'):
             value = filter_params.get('searchTelephone')
             query = query.where(self.get_model().client_telephone == value)
+            return query
 
-        return query
+        else:
+            return
 
 
