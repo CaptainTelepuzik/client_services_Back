@@ -1,3 +1,5 @@
+from Model.Adress import Adress
+from Model.NameStreet import NameStreet
 from classes.User import User
 from classes.Client import Client
 
@@ -6,6 +8,8 @@ class EndpointFactory:
     _ENDPOINT_MAP = {
         'User': User,
         'Client': Client,
+        'NameStreet': NameStreet,
+        'Adress': Adress,
     }
 
     def __init__(self, params: dict):
