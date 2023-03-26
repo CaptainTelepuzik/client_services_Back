@@ -1,5 +1,6 @@
-from Model.Adress import Adress
+
 from Model.NameStreet import NameStreet
+from classes.Address import Address
 from classes.User import User
 from classes.Client import Client
 
@@ -9,7 +10,7 @@ class EndpointFactory:
         'User': User,
         'Client': Client,
         'NameStreet': NameStreet,
-        'Adress': Adress,
+        'Address': Address,
     }
 
     def __init__(self, params: dict):

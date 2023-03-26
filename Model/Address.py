@@ -1,12 +1,11 @@
 from sqlalchemy import Column, Text
-from sqlalchemy.orm import relationship
 
 
 from Model.BaseModel import BaseModel
 
 
-class Adress(BaseModel):
-    __tablename__ = 'adress'
+class Address(BaseModel):
+    __tablename__ = 'address'
 
     city_name = Column(Text, nullable=False)
     street_name = Column(Text, nullable=False)
