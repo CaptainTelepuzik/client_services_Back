@@ -3,6 +3,7 @@ from Model.NameStreet import NameStreet
 from classes.Address import Address
 from classes.User import User
 from classes.Client import Client
+from classes.Measurement import Measurement
 
 
 class EndpointFactory:
@@ -11,6 +12,8 @@ class EndpointFactory:
         'Client': Client,
         'NameStreet': NameStreet,
         'Address': Address,
+        'Measurement': Measurement
+
     }
 
     def __init__(self, params: dict):
