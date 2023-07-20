@@ -1,4 +1,5 @@
-from sqlalchemy import Column, Text, Integer, ForeignKey, Date
+
+from sqlalchemy import Column, Text, Integer, ForeignKey, Date, Boolean
 from sqlalchemy.orm import relationship
 
 
@@ -17,6 +18,7 @@ class Client(BaseModel):
     client_last_telephone = Column(Text)
     client_email = Column(Text)
     client_comments = Column(Text)
+    complited = Column(Boolean)
 
     user = relationship('User', foreign_keys=[user_id])
 

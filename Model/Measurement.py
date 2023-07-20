@@ -11,8 +11,11 @@ class Measurement(BaseModel):
     comments = Column(Text)
     date_measure = Column(Text)
     complited = Column(Boolean)
+    time = Column(Integer)
+    executor = Column(Integer, ForeignKey('users.id'))
 
     client = relationship('Client', foreign_keys=[client_id])
     address = relationship('Address', foreign_keys=[address_id])
+    user = relationship('User', foreign_keys=[executor])
 
 
