@@ -16,15 +16,17 @@ class Client(BaseClass):
             query = query.where(self.get_model().client_telephone == value)
             return query
 
+        if filter_params.get('complited'):
+            value = filter_params.get('complited')
+            query = query.where(self.get_model().complited != value)
+            return query
+
         if filter_params.get('id'):
             value = filter_params.get('id')
             query = query.where(self.get_model().id == value)
             return query
 
-        if filter_params.get('onlyComplete'):
-            value = filter_params.get('onlyComplete')
-            query = query.where(self.get_model().complited == value)
-            return query
+
 
 
 
